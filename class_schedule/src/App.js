@@ -1,20 +1,27 @@
-import {Navbar, NavbarBrand} from 'reactstrap';
-//import Navbar from './component/Navbar';
+import React from 'react';
 import './App.css';
-import Cal from './component/cal';
+import Modal from 'react-modal';
+import Navbar from './Components/Navbar';
+import { BrowserRouter as Router, Routes , Route } from 'react-router-dom';
+import Calendar from './Components/Calendar';
+Modal.setAppElement('#root')
 
 function App() {
   return (
-    <div className="">
-      <Navbar dark color="primary">
-        <div className="container">
-          <NavbarBrand href="/">Class Scheduler</NavbarBrand>
-        </div>
-      </Navbar>
+    <React.Fragment>
+      <Calendar/>
+      {/* <Router>
+        <Routes >
+          <Route>
+            <Navbar/>
+            <Calendar/>
+          </Route>
+        </Routes >
+      </Router> */}
 
-      <Cal/>
-
-    </div>
+    </React.Fragment>
+    
+    
   );
 }
 
